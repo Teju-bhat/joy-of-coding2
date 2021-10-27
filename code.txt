@@ -208,9 +208,83 @@ int main()
          }
      printf("No indices found");
     }
-    
-    
+    ----------------------------------------------------------------------------------------------------------
+   QUESTION 5:
+  Given an image (a), Sanvi is not comfortable viewing it in her computer/tab. She wants a better
+viewing experience as shown in (b). Write a program that keeps Sanvi happy.
+(Hint. Image is represented as matrix; The input is a matrix and the output is a matrix as well.)
+  I/P: 1 2 3      O/P: 3 6 9
+       4 5 6           2 5 8
+       7 8 9           1 4 7
+ 
 
+#include <stdio.h>
+void main(){
+   int n;
+   printf("etr size: ");
+   scanf("%d",&n);
+   int arr[n][n];
+   for(int i=0;i<n;i++){
+       for(int j=0;j<n;j++){
+           scanf("%d",&arr[i][j]);
+       }
+   }
+   printf("array is\n");
+    for(int i=0;i<n;i++){
+        printf("\n");
+       for(int j=0;j<n;j++){
+           printf("%d",arr[j][n-i-1]);
+       }
+    
+}
+}
+-------------------------------------------------------------------------------------------
+QUESTION 6:
+Given an array (as shown) and a positive integer say 19, write a C program that prints the sub
+array and the range of indices whose sum is equal to 19. In this case the sub array is [4,9,6] and
+the indices range from 2 to 4.
+Test case 1                                    
+input
+[5, 4, 7, 3, 9, 2]
+Sum=23
+output
+the sub array is [4,7,3,9]
+Indices range from 1 to 4 
+Test case 2
+input
+[1, 7, 3, 8, 5, 9, 6, 2]
+Sum=9
+output
+the sub array is [9]
+Indices range from 5 to 5
+
+
+------------------------------------------------------------------------------------------
+   QUESTION 7: Consider a string “R N S Institute of Technology”. People are fond of
+ abbreviations. So the output expected for above string is RNSIT. Write a code to implement
+the same. Make your code generic so that it can abbreviate any given string say “British
+  Broadcasting Corporation” to BBC.
+  
+  
+    #include <stdio.h>
+     void main(){
+    char str[100];
+    printf("enter string : \n");
+    gets(str);
+    int j=0;
+    printf("%c",str[0]);
+    for(int i=0;i<str[i]!='\0';i++){
+       if(str[i-1]==' ' && str[i]>=65 && str[i]<=90){
+           printf("%c",str[i]);
+           }
+    }
+}
+------------------------------------------------------------------------
+  QUESTION 8: Baby Sanvi’s mother is preparing her for monthly assessment. To assess Sanvi’s recognition
+and counting ability, mother shows a English sentence say “a big black bear sat on a big black
+rug” and ask her to identify each letter and to tell the most frequent alphabet. In this case it’s a
+with count 6. Automate this process by writing a program in C.
+Note: Assume that the sentence will have only lower-case letters and no special characters. 
 
     
     
